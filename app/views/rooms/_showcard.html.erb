@@ -1,0 +1,22 @@
+<div class="showcard">
+  <div class="showcardtitle">
+    <h2> <%= @room.hotel.name %></h2>
+  </div>
+ <div class="imgcontainer">
+    <%= image_tag(@room.hotel.photo) %>
+  </div>
+  <div class="showcarddeets">
+    <div class="flex space-between">
+      <h3><i class="fa-solid fa-user"></i><%= @room.capacity %></h3>
+      <h3><%= @room.price_per_night %>$ per night</h3>
+    </div>
+    <h3><%= @room.hotel.description %></h3>
+  </div>
+  <button class="btn btn-primary sub-nav-item m-0" id="add-new" data-bs-toggle="modal" data-bs-target="#exampleModal">Book</button>
+
+  <% if user_signed_in? %>
+    <%= render "/rooms/booking_form"%>
+  <% else %>
+    <%= link_to "Login", new_user_session_path %>
+  <% end %>
+</div>

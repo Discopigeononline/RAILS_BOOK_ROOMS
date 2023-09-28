@@ -1,0 +1,20 @@
+<div class="card">
+  <%= link_to room_path(room), class: 'text-decoration-none' do %>
+    <div style="max-width: 100%; object-fit: cover;
+            width: 350; height: 200px;
+            overflow: hidden; align-items: center; display: flex; justify-content: center; align-items: center;">
+      <% if room.hotel.photo.attached?  %>
+          <%= image_tag(room.hotel.photo, :width => 350, :height => 350, crop: :fit) %>
+      <% else %>
+        <%= image_tag('hotel.jpeg', :height => 250) %>
+      <% end %>
+    </div>
+    <div class="cardinfo">
+      <h3 id="hotelname"><%= room.hotel.name %></h3>
+        <div class="flex-container space-between">
+          <h3><i class="fa-solid fa-user"></i><%= room.capacity %></h3>
+          <h3><%= room.price_per_night %>$ per night</h3>
+        </div>
+    </div>
+  <% end %>
+</div>

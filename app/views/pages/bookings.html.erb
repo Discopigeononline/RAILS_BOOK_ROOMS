@@ -1,0 +1,15 @@
+<h2>My bookings</h2>
+<% if current_user.bookings.nil? %>
+  <p><%= "No bookings yet!" %></p>
+<% else %>
+  <div class="cardcontainer">
+    <% current_user.bookings.each do |booking| %>
+      <div class="card">
+        <%= booking.room.hotel.name %>
+        <%= image_tag(booking.room.hotel.photo) %>
+        <h3>Arrival date: <%= booking.starts_at.strftime("%A %e %B") %></h3>
+        <h3>Departure date: <%= booking.ends_at.strftime("%A %e %B") %></h3>
+      </div>
+    <% end %>
+  </div>
+<% end %>

@@ -1,0 +1,7 @@
+<h1><%= @hotel.name %></h1>
+<p><%= @hotel.description %></p>
+
+
+<% @hotel.rooms.each do |room| %>
+  <%= render partial: 'rooms/roomcard', locals: { room: room } %>
+<% end %>

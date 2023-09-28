@@ -118,3 +118,15 @@ hotel = Hotel.new(
 file = URI.open("https://m.media-amazon.com/images/I/81zM4Q27GxL._AC_SL1500_.jpg")
 hotel.photo.attach(io: file, filename: "Death Star", content_type: "image/jpg")
 hotel.save
+
+hotels = Hotel.all
+
+hotels.each do |h|
+  2.times do
+    Room.create!(
+      price_per_night: rand(15..250),
+      capacity: rand(1..4),
+      hotel_id: h.id
+    )
+  end
+end

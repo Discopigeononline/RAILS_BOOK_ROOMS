@@ -1,0 +1,11 @@
+.fade {
+  backdrop-filter: blur(3px);
+}
+
+.modal-content, .title-form {
+  filter: brightness(120%);
+  border-radius: 8px;
+  opacity: 0.88;
+  background: rgb(149,213,178);
+  background: linear-gradient(0deg, rgba(149,213,178,1) 24%, rgba(82,183,136,0.9248074229691877) 75%);
+}

@@ -1,0 +1,13 @@
+<div class="row justify-content-center">
+    <div class="col-sm-8">
+      <div class="row justify-content-center cardcontainer">
+        <% if @hotels.any? %>
+          <% @hotels.each do |hotel| %>
+            <%= render "hotelcards", hotel: hotel %>
+          <% end %>
+        <% else %>
+          <em>Sorry, no hotels found.</em>
+        <% end %>
+      </div>
+    </div>
+  </div>

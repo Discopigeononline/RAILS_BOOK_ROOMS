@@ -1,2 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<section class="page-1">
+<div class="h1container">
+  <h1>Hoteleria</h1>
+</div>
+  <article>
+    <h2> <%= link_to 'Check hotels', hotels_path, class: 'text-decoration-none' %></h2>
+  </article>
+  <div class="parallax"></div>
+</section>
+<section class="page-2">
+  <article>
+    <h2><%= link_to 'Check rooms', rooms_path, class: 'text-decoration-none' %></h2>
+  </article>
+  <div class="parallax"></div>
+  <div class="parallax"></div>
+</section>
