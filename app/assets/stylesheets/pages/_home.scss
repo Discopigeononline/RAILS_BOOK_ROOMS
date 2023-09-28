@@ -20,25 +20,12 @@ section{
     z-index: 1800;
   }
 
-  h2{
-    font-weight: bold;
-    font-size: 80px;
-  }
-
-  h2:hover{
-    background-color: white;
-  }
-
   article{
     position:absolute;
     top:240px;
     left:40px;
     width:300px;
     z-index:4;
-
-    font-size: 18px;
-    line-height: 22px;
-    color: gray;
   }
 
 
@@ -74,4 +61,20 @@ section{
   height: 1200px;
 
   background: asset-url('hotel.jpeg') 50% 0 no-repeat fixed;
+}
+
+.div__slide {
+  display: inline;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  letter-spacing: 2px;
+  box-shadow: inset 0 0 0 0 #fff;
+  transition: all .4s linear;
+  background-color: transparent;
+  font-size: 80px;
+}
+
+.div__slide:hover {
+  color: #000;
+  box-shadow: inset 400px 0 0 0 #fff;
 }
